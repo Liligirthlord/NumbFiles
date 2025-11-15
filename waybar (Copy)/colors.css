@@ -1,0 +1,21 @@
+/* Monokai Base Colors */
+@define-color background #272822;       /* Dark gray/blackish */
+@define-color text #F8F8F2;       /* Off-white text */
+@define-color cursor     #F8F8F0;       /* Cursor color */
+
+/* Syntax Colors */
+@define-color red        #F92672;       /* Strings, errors */
+@define-color orange     #FD971F;       /* Numbers, constants */
+@define-color yellow     #E6DB74;       /* Keywords, special text */
+@define-color green      #A6E22E;       /* Variables, functions */
+@define-color cyan       #66D9EF;       /* Built-ins, types */
+@define-color blue       #66D9EF;       /* Functions, classes */
+@define-color purple     #AE81FF;       /* Keywords, operators */
+@define-color border    #75715E;       /* Comments, muted text */
+
+/* UI / Extras */
+@define-color selection  #49483E;       /* Highlight selection */
+@define-color foreground #8F908A;      /* Line numbers */
+@define-color gutter      #3E3D32;      /* Sidebar, folds */
+@define-color accent      #FD971F;      /* Active/selected elements */
+

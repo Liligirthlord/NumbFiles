@@ -1,0 +1,109 @@
+{
+	"layer": "top",
+	"position": "top",
+	"height": 20,
+	"hyprland/window": {
+		"max-length": 500
+
+	},
+	"modules-left": ["clock"],
+	"modules-center": ["hyprland/workspaces"],
+	"modules-right": ["cava", "group/managers"],
+
+
+"group/managers":{
+	"orientation": "horizontal",
+	"drawer": {
+		"transition-duration": 500,
+		"transition-left-to-right": false
+	},
+	"modules":[
+		"custom/power",
+		"network",
+		"pulseaudio",
+		"bluetooth",
+		"battery"
+	]
+},
+
+
+	"custom/power": {
+		"format": "",
+		"on-click": "wlogout",
+		"tooltip": false
+	},
+
+"bluetooth": {
+	// "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
+	"format": "",
+	"format-disabled": "", // an empty format will hide the module
+	"format-connected": "",
+	"tooltip-format": "{controller_alias}\t{controller_address}",
+	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",	
+	"on-click": "alacritty -e bluetuith"
+},
+
+       
+  "network": {
+    "format-disconnected": "󰖪",
+    "format-ethernet": "󰊗",
+    "format-wifi": "", 
+    "interval": 5,
+    "on-click": "alacritty -e impala",
+    "tooltip-format": "{ifname} {bandwidthDownBytes}",
+    "tooltip-format-disconnected": "Disconnected",
+    "tooltip-format-ethernet": "{ifname} {bandwidthDownBytes} 󰈀",
+    "tooltip-format-wifi": "{essid} {bandwidthDownBytes} "
+  },
+"battery": {
+		"bat": "BAT0",
+		"interval": 15,
+  		"tooltip": true,
+		"tooltip-format": "{capacity}%\n{timeTo}",
+  		"icon-size": 13,
+  		"format": "{icon}",
+  		"format-charging": "",
+  		"format-full": "",
+  		"format-icons": ["","","","",""]
+},
+
+"pulseaudio": {
+    "format": "{icon}",
+    "format-bluetooth": "{icon}",
+    "format-muted": "",
+    "format-icons": {
+        "alsa_output.pci-0000_00_1f.3.analog-stereo": "",
+        "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
+        "headphone": "",
+        "hands-free": "",
+        "headset": "",
+        "phone": "",
+        "phone-muted": "",
+        "portable": "",
+        "car": "",
+        "default": ["", "", ""]
+    },
+    "scroll-step": 1,
+    "on-click": "alacritty -e pulsemixer",
+    "tooltip-format":"{volume}%",
+    "ignored-sinks": ["Easy Effects Sink"]
+},
+
+"clock": {
+        "format": "{:%H:%M}",
+        "format-alt": "{:%R - %A %B %d, %Y}",
+	"tooltip": false
+                    },
+        "actions":  {
+                    "on-click-right": "mode"
+                    }
+    },
+
+"hyprland/workspaces": {
+	"format": "{icon}",
+	"cursor": "pointer",
+	"on-click": "activate"
+
+   }
+}

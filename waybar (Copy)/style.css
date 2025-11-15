@@ -1,0 +1,79 @@
+@import "colors.css";
+
+*{
+	font-family: "Caskaydia Nerd Font", "Lilex Nerd Font";
+	font-size: 13px;
+	font-weight: 400;
+	min-height: 0;
+}
+
+
+window#waybar {
+background: transparent;
+}
+
+#managers{
+    border-radius: 5px;
+    background: @background; /* linear-gradient(145deg, #1e1e2e 0%, #181825 100%); */
+    border: solid 2px @border;
+    font-weight:800;
+}
+
+#custom-power,
+#bluetooth,
+#network,
+#pulseaudio,
+#battery {
+margin: 0 10px;
+padding-right:3px;
+min-width:0;
+color: @text;
+}
+
+#workspaces {
+  min-height: 0;
+  margin: 0px;
+  padding:3px;
+  background: @background;
+  border: solid 2px @border;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+ }
+
+#workspaces button {
+color:transparent;
+background: @selection;
+transition: all 0.3s ease-in-out;
+min-width: 0;
+margin: 0;
+border-radius: 10px;
+border-color: @background;
+}
+
+#workspaces button.active {
+background: @foreground;/*linear-gradient(90deg, @background 0%, @text 90%);*/
+color:transparent;
+transition: all 0.3s ease-in-out;
+font-size: 0px;
+border-radius:10px;
+min-width:45px;
+}
+
+#workspaces button:hover {
+  box-shadow: none; /* Remove predefined box-shadow */
+  text-shadow: none; /* Remove predefined text-shadow */
+  background: linear-gradient(90deg, @background 0%, @selection 100%); /* Remove predefined background color (white) */
+  transition: none; /* Disable predefined animations */
+  border-color: @selection;
+}
+
+#clock {
+font-weight: 800;
+border: solid 2px @border;
+background: @background;
+border-radius:5px;
+color: @text;
+padding:3px;
+}
+
+
