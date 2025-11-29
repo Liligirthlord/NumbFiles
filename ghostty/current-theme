@@ -1,0 +1,23 @@
+# Background and foreground colors
+background = #161816
+foreground = #ebecef
+
+# Standard colors
+palette = 0=#161816
+palette = 1=#c47464
+palette = 2=#a4a790
+palette = 3=#b6a890
+palette = 4=#9998A6
+palette = 5=#b6aeb7
+palette = 6=#aac4cb
+palette = 7=#BBBCC5
+
+# Bright colors
+palette = 8=#3c3e3c
+palette = 9=#e4ab9f
+palette = 10=#cfd1c1
+palette = 11=#ddd4c5
+palette = 12=#c8c8d0
+palette = 13=#e2dee3
+palette = 14=#e1ecef
+palette = 15=#ebecef
