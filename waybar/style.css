@@ -1,0 +1,185 @@
+@import "/home/numbnuts/.local/share/numbie/current/theme/waybar.css";
+/* CSS for default things */
+
+window#waybar {
+  background-color: @background;
+  border-radius: 12;
+
+}
+
+#tags {
+  margin: 0px;
+  margin-left: 0px;
+  margin-right: 2px;
+  padding: 0px;
+  background-color: @background;
+  color: @foreground;
+}
+
+#tags button { /* hide empty tags */
+  min-width: 0;
+  min-height: 0;
+  margin: 0px;
+  margin-left: -2px;
+  padding: 0px; 
+  background-color: transparent;
+  border-radius: 2px;
+  font-family: "FiraCode Nerd Font Mono", auto, auto;
+  font-size: 0;
+  font-weight: bold;
+}
+
+#tags button.occupied,
+#tags button.focused,
+#tags button.urgent { /* non-empty tags shared */
+  padding-left: 24px;
+  padding-right: 23px; /* looks better if right is one pixel less than right in most cases */
+  margin-left: 1px;
+  font-size: 16px;
+}
+
+#tags button.occupied {  
+  background-color: @background;
+  color: @foreground;
+}
+#tags button.focused {
+  background-color: @foreground;
+  color: @background;
+}
+#tags button.urgent {
+  background-color: @background;
+  color: @foreground;
+}
+
+#window {
+  margin: 0px;
+  margin-left: 6px;
+  margin-right: 4px;
+  padding: 0px;
+  padding-left: 4px;
+  padding-right: 4px;
+  font-family: "FiraCode Nerd Font", auto, auto;
+  font-size: 14px;
+  background-color: @background;
+  color: @foreground;
+}
+
+#waybar.empty #window { /* no active window makes window title disappear */
+  background-color: transparent;
+  background: none;
+}
+
+#clock {
+  margin: 0px;
+  margin-top: 2px;
+  margin-left: 4px;
+  margin-right: 4px;
+  padding: 0px;
+  padding-left: 2px;
+  padding-right: 2px;
+  font-family: "JetBrains Mono Nerd Font", auto, auto;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: transparent;
+  color: @foreground;
+}
+
+#tray {
+  margin: 0px;
+  margin-left: 4px;
+  margin-right: 4px;
+  padding: 0px;
+  padding-left: 2px;
+  padding-right: 2px;
+  font-family: "FiraCode Nerd Font Mono", auto, auto;
+  font-size: 12px;
+  background-color: transparent;
+  color: @foreground;
+}
+
+#temperature
+{
+  margin: 0px;
+  padding: 0px;
+  font-family: "FiraCode Nerd Font", auto, auto;
+  font-size: 14px;
+  background-color: transparent;
+  color: #dfdfdf;
+}
+
+#cpu {
+  margin-left: 0px;
+  margin-right: 4px;
+}
+
+#temperature {
+  margin-left: 4px;
+  margin-right: 8px;
+}
+
+#memory {
+  margin-left: 8px;
+  margin-right: 16px;
+}
+
+#battery,
+#pulseaudio {
+  margin: 0px;
+  margin-left: 2px;
+  margin-right: 0px;
+  padding: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 4px;
+  font-family: "FiraCode Nerd Font", auto, auto;
+  font-size: 14px;
+  background-color: @background;
+  color: @foreground;
+}
+
+#network {
+  margin: 0px;
+  margin-left: 6px;
+  margin-right: 4px;
+  padding: 0px;
+  font-family: "FiraCode Nerd Font", auto, auto;
+  font-size: 14px;
+  background-color: @background;
+  color: @foreground;
+}
+
+/* Custom */
+
+#custom-appmenu,
+#custom-utilities {
+  margin: 0px;
+  padding: 0px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 4px;
+  font-family: "FiraCode Nerd Font Mono", auto, auto;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: @background;
+  color: @foreground;
+}
+
+#custom-appmenu {
+  margin-right: 2px;
+}
+
+#custom-utilities {
+  margin-left: 3px;
+}
+
+/* Tooltips */
+tooltip {
+  background-color: rgba(0, 0, 0, 0.65);
+  border-radius: 4px;
+}
+
+tooltip label {
+  color: @foreground;
+  font-family: "FiraCode Nerd Font Mono", auto, auto;
+  font-size: 14px;
+}

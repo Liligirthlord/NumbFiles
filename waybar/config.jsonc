@@ -1,0 +1,98 @@
+{
+  "layer": "top",
+
+  "position": "top",
+
+  "height": 25,
+  "width": 0,
+
+
+  "spacing": 0,
+
+  "modules-left": ["custom/appmenu", "dwl/tags", "dwl/window"],
+  "modules-center": ["clock"],
+  "modules-right": ["temperature", "tray", "battery", "network", "pulseaudio", "custom/utilities"],
+  "_unused": [],
+
+
+
+  "dwl/tags": {},
+
+  "dwl/window": {
+    "format": "{title}",
+    "rewrite": {
+      "(.*)(- Brave)(.*)": " $1",
+      "(.*)(- Thunar)(.*)": " $1",
+      "(.*)(vim)(.*)": " $0",
+      "(.*)(Tauon)(.*)": " Tauon",
+      "(.*)(ONLYOFFICE)(.*)": " $1",
+      "(gparu)": " GParu", 
+      "(Notes)": " Notes"
+    },
+    "on-click": "",
+    "tooltip": false
+  },
+
+
+
+  "clock": {
+    "format": "{:%H:%M}",
+    "tooltip-format": " {:%Y %B %d}\n\n{calendar}"
+  },
+
+
+  "temperature": {
+    "thermal-zone": 2,
+    "critical-threshold": 80,
+    "format-critical": "󰈸 {temperatureC}°C",
+    "format": "{temperatureC}°C"
+  },
+
+
+  "tray": {
+    "icon-size": 20,
+    "spacing": 4,
+    "show-passive-items": true
+  },
+
+  "battery": {
+    "states": {
+      "warning": 33,
+      "critical": 10
+    },
+    "format": "{icon} {capacity}%",
+    "format-icons": ["", "", "", "", ""]
+  },
+  
+  "network": {
+    "format-wifi": " ({signalStrength}%)",
+    "format-ethernet": " Ethernet",
+    "format-disconnected": " Disconnected",
+    "on-click": "ghostty -e impala"
+  },
+
+  "pulseaudio": {
+    "scroll-step": 1, // %, can be a float
+    "format": "{icon} {volume}%",
+    "format-muted": "󰖁",
+    "format-icons": {
+      "default": ["󰕿", "󰖀", "󰕾"]
+    },
+    "tooltip-format": false,
+    "on-click": "ghostty -e pulsemixer"
+  },
+
+
+
+  "custom/appmenu": {
+    "format": "󰀻",
+    "tooltip-format": "Applications Menu",
+    "on-click": "bash ~/.config/rofi/app-menu.sh"
+  },
+
+  "custom/utilities": {
+    "format": "",
+    "tooltip-format": "Utility Menu",
+    "on-click": "bash ~/.config/rofi/utilities.sh"
+  }
+}
